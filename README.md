@@ -9,6 +9,7 @@ chmod +x nvim.appimage && sudo mv nvim.appimage /usr/local/bin/nvim
 
 依赖的命令行工具
 
+- clangd
 - g++
 - fzf
 - fd-find
