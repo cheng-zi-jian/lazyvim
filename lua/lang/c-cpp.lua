@@ -1,7 +1,13 @@
 _G.LangSetup({
     filetypes = { "c", "cpp" },
     conform = {
-        formatter = { "clang_format" },
+        custom_formatters = {
+            clangindent = {
+                command = "clang-format",
+                args = { "--style=file:/etc/.clang-format" },
+            },
+        },
+        formatter = { "clangindent" },
     },
     dap = {
         type = "codelldb",

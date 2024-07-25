@@ -33,7 +33,7 @@ set fileformat=unix
 set fileformats=unix,dos
 
 set cursorline
-set colorcolumn=80
+"set colorcolumn=80
 set number
 set numberwidth=2
 set scrolloff=8
@@ -120,7 +120,9 @@ set mouse=nv " nvi default
 let mapleader = "'"
 let maplocalleader = "'"
 
-inoremap jj <Esc> " 有cmp-rime 的时候不适合开启
+"inoremap jj <Esc> " 有cmp-rime 的时候不适合开启
+inoremap jk <esc>:w<cr>
+inoremap jj <esc>
 
 " C-r用作搜索替换
 nnoremap U <C-r>
@@ -290,7 +292,7 @@ cnoremap <M-f> <C-Right>
 augroup _general_settings
     autocmd!
     autocmd FileType qf,help,man,checkhealth,startuptime nnoremap <silent><buffer> q <cmd>close<CR>
-    autocmd FileType json,json5,yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+    "autocmd FileType json,json5,yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
     autocmd FileType json,json5,yaml,help setlocal cursorcolumn
     autocmd FileType help setlocal nowrap
     if has('nvim')
